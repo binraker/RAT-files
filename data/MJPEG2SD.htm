@@ -461,7 +461,7 @@
                 <h2 id="page-title">RAT01</h2>&nbsp;
                 <h6 id="fw_version" class="default-action displayonly">ver: 6.2.3</h6>
               </section>
-              <div><textarea name="TinyML" id="TinyML" rows="10" cols="100"></textarea></div>
+              <div><textarea name="TinyML" id="TinyML" rows="11" cols="100" readonly></textarea></div>
 			  <nav id="maintoolbar">
               	<ul class="navtop">
                   <li><button id="showLog" value="1">Show Log</button></li>
@@ -1168,7 +1168,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           if(state['isrecord']=='No' && document.getElementById("forceRecord").innerHTML=='Stop Recording')  updateValue(document.getElementById('forceRecord'), 0, false)
 		  document.getElementById('TinyML').value = "";
 		  for (el in state["TinyML"]){
-			document.getElementById('TinyML').value += el;
+			document.getElementById('TinyML').value += state["TinyML"][el] +"\n" ;
 		  }
           timer = setTimeout(refresh_status_quick, 1000);
       })

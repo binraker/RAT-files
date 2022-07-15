@@ -1167,7 +1167,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
           if(state['isrecord']=='Yes' && document.getElementById("forceRecord").innerHTML=='Record')  updateValue(document.getElementById('forceRecord'), 1, false)
           if(state['isrecord']=='No' && document.getElementById("forceRecord").innerHTML=='Stop Recording')  updateValue(document.getElementById('forceRecord'), 0, false)
 		  document.getElementById('TinyML').value = "";
-		  for (el in state["Tiny"]){
+		  for (el in state["TinyML"]){
 			document.getElementById('TinyML').value += el;
 		  }
           timer = setTimeout(refresh_status_quick, 1000);
